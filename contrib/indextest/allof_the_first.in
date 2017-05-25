@@ -1,0 +1,12 @@
+{
+ me(id: <m.07mv_h>) {
+  director.film {
+   directed_by {
+    director.film(first: 10) @filter(allofterms(name, "the")) {
+     _uid_
+     name@en
+    }
+   }
+  }
+ }
+}
